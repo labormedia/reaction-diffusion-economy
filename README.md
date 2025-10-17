@@ -23,17 +23,17 @@ For each round $t \in \mathcal{T}$, starting from incoming endowments $\{\mathbf
 
 ##### Phase 1: Reaction (Endogenous Transformation)
 Each agent $i \in \mathcal{I}$ independently chooses production intensities $\mathbf{x}_i^t = (x_i^{t,r})_{r \in \mathcal{R}} \in \mathbb{R}_+^{|\mathcal{R}|}$ to solve:
-\[
+$`
 \max_{\mathbf{x}_i^t \geq \mathbf{0}} \, u_i\left( \mathbf{e}_i^t - \sum_{r \in \mathcal{R}} x_i^{t,r} \mathbf{a}_r + \sum_{r \in \mathcal{R}} x_i^{t,r} \mathbf{b}_r \right)
-\]
+`$
 subject to the resource constraint:
-\[
+$`
 \sum_{r \in \mathcal{R}} x_i^{t,r} \mathbf{a}_r \leq \mathbf{e}_i^t \quad (\text{componentwise}).
-\]
+`$
 The post-reaction endowment is:
-\[
+`$
 \mathbf{e}_i^{t,\text{react}} = \mathbf{e}_i^t + \sum_{r \in \mathcal{R}} x_i^{t,r} (\mathbf{b}_r - \mathbf{a}_r).
-\]
+`$
 This phase is decentralized and myopic (or anticipatory of Phase 2 equilibrium, as specified in the equilibrium concept below). The net effect allows minting new combinations (e.g., $g_4$) while destroying inputs proportionally, preserving convexity of the production set.
 
 ##### Phase 2: Diffusion (Proportional Exchange)
@@ -42,13 +42,13 @@ Given $\{\mathbf{e}_i^{t,\text{react}}\}_{i \in \mathcal{I}}$, agents engage in 
 - Agent $i$ retains the unexchanged portion $(1 - \lambda_i^t) \mathbf{e}_i^{t,\text{react}}$ outside the market.
 - The aggregate supply pool is $\mathbf{S}^t = \sum_{i \in \mathcal{I}} \mathbf{s}_i^t = \sum_{i \in \mathcal{I}} \lambda_i^t \mathbf{e}_i^{t,\text{react}} \in \mathbb{R}_+^n$.
 - Each agent $i$ receives a demand bundle $\mathbf{z}_i^t \in \mathbb{R}_+^n$ from the pool, where $\{\mathbf{z}_i^t\}_{i \in \mathcal{I}}$ reallocates $\mathbf{S}^t$ exactly:
-  \[
+  $`
   \sum_{i \in \mathcal{I}} \mathbf{z}_i^t = \mathbf{S}^t \quad (\text{componentwise}).
-  \]
+  `$
 The outgoing endowment (input to $t+1$) is:
-\[
+$`
 \mathbf{e}_i^{t+1} = (1 - \lambda_i^t) \mathbf{e}_i^{t,\text{react}} + \mathbf{z}_i^t.
-\]
+`$
 Trade is anonymous and global (no spatial structure), with the proportional restriction modeling "diffusion" as constrained bundle trading (agents cannot disaggregate endowments).
 
 #### 3. Equilibrium Concept
@@ -56,18 +56,18 @@ A **sequential competitive equilibrium** for the economy is a sequence of alloca
 - **Feasibility** (for each $t$): The reaction and diffusion constraints in Sections 2a and 2b hold, with $\mathbf{p}^t \in \mathbb{R}_{++}^n$ (normalized, e.g., $\sum_k p_k^t = 1$).
 - **Reaction Optimization** (for each $i,t$): $\mathbf{x}_i^t$ maximizes $u_i(\mathbf{e}_i^{t+1})$ over feasible intensities, anticipating the Phase 2 equilibrium given $\mathbf{p}^t$ (subgame perfect: solve backward from diffusion).
 - **Diffusion Optimization** (for each $i,t$, given $\mathbf{p}^t$): The pair $(\lambda_i^t, \mathbf{z}_i^t)$ solves
-  \[
+  $`
   \max_{\lambda_i^t \in [0,1], \mathbf{z}_i^t \geq \mathbf{0}} \, u_i\left( (1 - \lambda_i^t) \mathbf{e}_i^{t,\text{react}} + \mathbf{z}_i^t \right)
-  \]
+  `$
   subject to the budget constraint (value of sold bundle funds purchases):
-  \[
+  $`
   \mathbf{p}^t \cdot \mathbf{z}_i^t \leq \lambda_i^t \, (\mathbf{p}^t \cdot \mathbf{e}_i^{t,\text{react}}).
-  \]
+  `$
   (The retained portion is untaxed/unpriced, reflecting the directional constraint.)
 - **Market Clearing** (for each $t$, each good $k \in \mathcal{N}$):
-  \[
+  $`
   \sum_{i \in \mathcal{I}} \lambda_i^t e_{i,k}^{t,\text{react}} = \sum_{i \in \mathcal{I}} z_{i,k}^t.
-  \]
+  `$
 - **Price Positivity**: $\mathbf{p}^t \gg \mathbf{0}$ (strict to ensure interiority).
 
 #### 4. Properties
@@ -82,26 +82,26 @@ A **sequential competitive equilibrium** for the economy is a sequence of alloca
 
    * Let $(e_{i,k}^t)$ denote the local concentration of “species” $(k)$ (good $(k)$) at “cell” $(i)$.
    * The **reaction term** corresponds to endogenous transformation:
-     \[
+     $`
      R_{i,k}(\mathbf{e}_i^t) = \sum_{r \in \mathcal{R}} x_i^{t,r}(b_{r,k} - a_{r,k}),
-     \]
+     `$
      which locally produces or consumes goods.
    * The **diffusion term** approximates redistribution:
-     \[
+     $`
      D_{i,k}(\mathbf{e}_i^t) = \sum_{j \neq i} \kappa_{ij} (e_{j,k}^{t,\text{react}} - e_{i,k}^{t,\text{react}}),
-     \]
+     `$
      where $(\kappa_{ij})$ are proportional exchange coefficients induced by the equilibrium allocation $(\lambda_i^t, \mathbf{z}_i^t)$.
      In continuous space, this converges to a Laplacian operator:
-     \[
+     $`
      \frac{\partial e_k}{\partial t} = R_k(\mathbf{e}) + \nabla \cdot (D_k \nabla e_k),
-     \]
+     `$
      linking market reallocation to spatial diffusion.
 
 2. **Potential Function and Energy Analogy**
    If $(u_i(\cdot))$ are differentiable, define aggregate potential
-   \[
+   $`
    \Phi(\{\mathbf{e}_i^t\}) = \sum_i u_i(\mathbf{e}_i^t),
-   \]
+   `$
    which behaves as a Lyapunov function under convex–concave interactions. Diffusion equilibria then correspond to stationary points $(\nabla_{e_{i,k}} \Phi = 0)$, mirroring Turing steady states where marginal utilities align across agents.
 
 3. **Discrete-Time Implementation (Convex Optimization Form)**
@@ -113,17 +113,17 @@ A **sequential competitive equilibrium** for the economy is a sequence of alloca
      `$
      where $(A = B - A^-)$ encodes reaction net coefficients.
    * **Diffusion stage**:
-     \[
+     $`
      \max_{\lambda_i^t, \mathbf{z}_i^t} u_i((1-\lambda_i^t)\mathbf{e}_i^{t,\text{react}}+\mathbf{z}_i^t)
-     \]
+     `$
      subject to $(\mathbf{p}^t \cdot \mathbf{z}_i^t \le \lambda_i^t (\mathbf{p}^t \cdot \mathbf{e}_i^{t,\text{react}}))$ and market clearing.
      The fixed-point of these subproblems defines $(\mathbf{p}^t, \{\lambda_i^t,\mathbf{z}_i^t\})$.
 
 4. **Equilibrium Stability Criterion**
    Define local perturbations $(\delta \mathbf{e}_i^t)$ and linearize:
-   \[
+   $`
    \delta \mathbf{e}_i^{t+1} = J_R \delta \mathbf{e}_i^t + J_D \delta \mathbf{e}_i^t,
-   \]
+   `$
    where $(J_R)$ and $(J_D)$ are Jacobians of reaction and diffusion maps.
    Stability requires $(\rho(J_R + J_D) < 1)$. If eigenmodes cross unity, endogenous oscillations or specialization patterns emerge—analogous to economic “Turing patterns”.
 
