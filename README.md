@@ -8,7 +8,7 @@ A self-contained and discrete economic model to continuous reaction-diffusion PD
 - **Goods**: Let $\mathcal{N} = \{1, 2, \dots, n\}$ be the finite set of all good types (including raw materials, tools, intermediate goods, final goods, and energy capacities).
 - **Agents**: Let $\mathcal{I} = \{1, 2, \dots, m\}$ be the finite set of agents.
 - **Time Horizon**: Let $\mathcal{T} = \{1, 2, \dots, T\}$ be the finite set of sequential rounds, with $T \in \mathbb{N}$.
-- **Initial Endowments**: For each $i \in \mathcal{I}$, let $\mathbf{e}_i^0 \in \mathbb{R}_{++}^n$ be the initial endowment vector (strictly positive to ensure interior solutions).
+- **Initial Endowments**: For each $i \in \mathcal{I}$, let $`\mathbf{e}_i^0 \in \mathbb{R}_{++}^n`$ be the initial endowment vector (strictly positive to ensure interior solutions).
 - **Reaction Rules**: Let $\mathcal{R}$ be a finite set of production technologies (reactions). For each $r \in \mathcal{R}$:
   - $\mathbf{a}_r \in \mathbb{R}_+^n$: vector of input coefficients (with $\mathbf{a}_r \neq \mathbf{0}$).
   - $\mathbf{b}_r \in \mathbb{R}_+^n$: vector of output coefficients (with $\mathbf{b}_r \not\leq \mathbf{a}_r$ componentwise to ensure positive net production potential).
