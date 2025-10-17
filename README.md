@@ -31,17 +31,17 @@ $`
 \sum_{r \in \mathcal{R}} x_i^{t,r} \mathbf{a}_r \leq \mathbf{e}_i^t \quad (\text{componentwise}).
 `$
 The post-reaction endowment is:
-`$
+$`
 \mathbf{e}_i^{t,\text{react}} = \mathbf{e}_i^t + \sum_{r \in \mathcal{R}} x_i^{t,r} (\mathbf{b}_r - \mathbf{a}_r).
 `$
 This phase is decentralized and myopic (or anticipatory of Phase 2 equilibrium, as specified in the equilibrium concept below). The net effect allows minting new combinations (e.g., $g_4$) while destroying inputs proportionally, preserving convexity of the production set.
 
 ##### Phase 2: Diffusion (Proportional Exchange)
-Given $\{\mathbf{e}_i^{t,\text{react}}\}_{i \in \mathcal{I}}$, agents engage in restricted trade via a centralized market clearing:
-- Each agent $i$ chooses the exchange fraction $\lambda_i^t \in [0,1]$, committing to sell the proportional bundle $\mathbf{s}_i^t = \lambda_i^t \mathbf{e}_i^{t,\text{react}}$ (direction constrained to span$\{\mathbf{e}_i^{t,\text{react}}\}$).
-- Agent $i$ retains the unexchanged portion $(1 - \lambda_i^t) \mathbf{e}_i^{t,\text{react}}$ outside the market.
-- The aggregate supply pool is $\mathbf{S}^t = \sum_{i \in \mathcal{I}} \mathbf{s}_i^t = \sum_{i \in \mathcal{I}} \lambda_i^t \mathbf{e}_i^{t,\text{react}} \in \mathbb{R}_+^n$.
-- Each agent $i$ receives a demand bundle $\mathbf{z}_i^t \in \mathbb{R}_+^n$ from the pool, where $\{\mathbf{z}_i^t\}_{i \in \mathcal{I}}$ reallocates $\mathbf{S}^t$ exactly:
+Given $`\{\mathbf{e}_i^{t,\text{react}}\}_{i \in \mathcal{I}}`$, agents engage in restricted trade via a centralized market clearing:
+- Each agent $i$ chooses the exchange fraction $`\lambda_i^t \in [0,1]`$, committing to sell the proportional bundle $`\mathbf{s}_i^t = \lambda_i^t \mathbf{e}_i^{t,\text{react}}`$ (direction constrained to span$`\{\mathbf{e}_i^{t,\text{react}}\}`$).
+- Agent $i$ retains the unexchanged portion $`(1 - \lambda_i^t) \mathbf{e}_i^{t,\text{react}}`$ outside the market.
+- The aggregate supply pool is $`\mathbf{S}^t = \sum_{i \in \mathcal{I}} \mathbf{s}_i^t = \sum_{i \in \mathcal{I}} \lambda_i^t \mathbf{e}_i^{t,\text{react}} \in \mathbb{R}_+^n`$.
+- Each agent $i$ receives a demand bundle $`\mathbf{z}_i^t \in \mathbb{R}_+^n`$ from the pool, where $`\{\mathbf{z}_i^t\}_{i \in \mathcal{I}}`$ reallocates $`\mathbf{S}^t`$ exactly:
   $`
   \sum_{i \in \mathcal{I}} \mathbf{z}_i^t = \mathbf{S}^t \quad (\text{componentwise}).
   `$
