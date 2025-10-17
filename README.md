@@ -80,7 +80,7 @@ A **sequential competitive equilibrium** for the economy is a sequence of alloca
 
 1. **Reaction–Diffusion Analogy**
 
-   * Let $(e_{i,k}^t)$ denote the local concentration of “species” $(k)$ (good $(k)$) at “cell” $(i)$.
+   * Let $(e_{i,k}^t)$ denote the local concentration of “species” $`(k)`$ (good $`(k)`$) at “cell” $(i)$.
    * The **reaction term** corresponds to endogenous transformation:
      $`
      R_{i,k}(\mathbf{e}_i^t) = \sum_{r \in \mathcal{R}} x_i^{t,r}(b_{r,k} - a_{r,k}),
