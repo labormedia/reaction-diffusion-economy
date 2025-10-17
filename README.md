@@ -16,7 +16,7 @@ A self-contained and discrete economic model to continuous reaction-diffusion PD
 - **Preferences**: For each $`i \in \mathcal{I}`$, let $`u_i: \mathbb{R}_+^n \to \mathbb{R}`$ be a continuous, strictly increasing, and strictly quasi-concave utility function (convex preferences: upper contour sets are convex). Strict monotonicity ensures exhaustive use of endowments.
 - **Production Feasibility**: The reaction technology for each agent is linear (hence convex feasible set). No external inputs beyond current endowments; transformations are endogenous to the agent's state.
 
-Total endowment conservation holds across phases: $`\sum_{i \in \mathcal{I}} \mathbf{e}_i^{t+1} = \sum_{i \in \mathcal{I}} \mathbf{e}_i^t$ for all $t \in \mathcal{T}`$.
+Total endowment conservation holds across phases: $`\sum_{i \in \mathcal{I}} \mathbf{e}_i^{t+1} = \sum_{i \in \mathcal{I}} \mathbf{e}_i^t`$ for all $`t \in \mathcal{T}`$.
 
 #### 2. Round Dynamics
 For each round $t \in \mathcal{T}$, starting from incoming endowments $`\{\mathbf{e}_i^t\}_{i \in \mathcal{I}} \in (\mathbb{R}_+^n)^m`$ (with $`\mathbf{e}_i^1 = \mathbf{e}_i^0`$):
