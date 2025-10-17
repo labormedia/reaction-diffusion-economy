@@ -108,9 +108,9 @@ A **sequential competitive equilibrium** for the economy is a sequence of alloca
    Each round can be computed via a two-stage convex program:
 
    * **Reaction stage**:
-     \[
+     $`
      \max_{x_i^t} u_i(\mathbf{e}_i^t + A x_i^t), \quad \text{s.t. } A^- x_i^t \le \mathbf{e}_i^t,
-     \]
+     `$
      where $(A = B - A^-)$ encodes reaction net coefficients.
    * **Diffusion stage**:
      \[
