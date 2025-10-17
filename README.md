@@ -52,10 +52,10 @@ $`
 Trade is anonymous and global (no spatial structure), with the proportional restriction modeling "diffusion" as constrained bundle trading (agents cannot disaggregate endowments).
 
 #### 3. Equilibrium Concept
-A **sequential competitive equilibrium** for the economy is a sequence of allocations, choices, and prices $\{(\{\mathbf{x}_i^t, \lambda_i^t, \mathbf{z}_i^t\}_{i \in \mathcal{I}}, \mathbf{p}^t)\}_{t \in \mathcal{T}}$ satisfying:
-- **Feasibility** (for each $t$): The reaction and diffusion constraints in Sections 2a and 2b hold, with $\mathbf{p}^t \in \mathbb{R}_{++}^n$ (normalized, e.g., $\sum_k p_k^t = 1$).
-- **Reaction Optimization** (for each $i,t$): $\mathbf{x}_i^t$ maximizes $u_i(\mathbf{e}_i^{t+1})$ over feasible intensities, anticipating the Phase 2 equilibrium given $\mathbf{p}^t$ (subgame perfect: solve backward from diffusion).
-- **Diffusion Optimization** (for each $i,t$, given $\mathbf{p}^t$): The pair $(\lambda_i^t, \mathbf{z}_i^t)$ solves
+A **sequential competitive equilibrium** for the economy is a sequence of allocations, choices, and prices $`\{(\{\mathbf{x}_i^t, \lambda_i^t, \mathbf{z}_i^t\}_{i \in \mathcal{I}}, \mathbf{p}^t)\}_{t \in \mathcal{T}}`$ satisfying:
+- **Feasibility** (for each $t$): The reaction and diffusion constraints in Sections 2a and 2b hold, with $`\mathbf{p}^t \in \mathbb{R}_{++}^n$ (normalized, e.g., $\sum_k p_k^t = 1`$).
+- **Reaction Optimization** (for each $i,t$): $`\mathbf{x}_i^t$ maximizes $u_i(\mathbf{e}_i^{t+1})$ over feasible intensities, anticipating the Phase 2 equilibrium given $\mathbf{p}^t`$ (subgame perfect: solve backward from diffusion).
+- **Diffusion Optimization** (for each $i,t$, given $`\mathbf{p}^t`$): The pair $`(\lambda_i^t, \mathbf{z}_i^t)`$ solves
   $`
   \max_{\lambda_i^t \in [0,1], \mathbf{z}_i^t \geq \mathbf{0}} \, u_i\left( (1 - \lambda_i^t) \mathbf{e}_i^{t,\text{react}} + \mathbf{z}_i^t \right)
   `$
